@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetNode</servlet-name>
+    <servlet-class>NetWorkTopologyManage.GetNode</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetHost</servlet-name>
+    <servlet-class>NetWorkTopologyManage.GetHost</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CreateQos</servlet-name>
+    <servlet-class>QosManage.CreateQos</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteQos</servlet-name>
+    <servlet-class>QosManage.DeleteQos</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QuerryQos</servlet-name>
+    <servlet-class>QosManage.QuerryQos</servlet-class>
+  </servlet>
+   <servlet>  
+        <servlet-name>Log4JTestServlet</servlet-name>  
+        <servlet-class>Log.Log4jInit</servlet-class>  
+    </servlet>  
+  
+    <!--用来启动 log4jConfigLocation的servlet -->  
+    <servlet>  
+        <servlet-name>Log4jInit</servlet-name>  
+        <servlet-class>Log.Log4jInit</servlet-class>  
+        <init-param>  
+            <param-name>log4j</param-name>  
+            <param-value>log4j.properties</param-value>  
+        </init-param>  
+        <load-on-startup>1</load-on-startup>  
+    </servlet>  
+  <servlet-mapping>
+    <servlet-name>GetNode</servlet-name>
+    <url-pattern>/NetWorkTopologyManage/GetNode</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetHost</servlet-name>
+    <url-pattern>/NetWorkTopologyManage/GetHost</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CreateQos</servlet-name>
+    <url-pattern>/QosManage/CreateQos</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteQos</servlet-name>
+    <url-pattern>/QosManage/DeleteQos</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QuerryQos</servlet-name>
+    <url-pattern>/QosManage/QuerryQos</url-pattern>
+  </servlet-mapping>
+</web-app>
